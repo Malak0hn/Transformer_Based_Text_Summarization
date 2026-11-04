@@ -1,4 +1,3 @@
-import spaces
 import gradio as gr
 import os
 import re
@@ -24,7 +23,6 @@ model.eval()
 # =========================
 # Clean text
 # =========================
-@spaces.GPU
 def clean_text(text):
     text = re.sub(r"\r\n", " ", text)
     text = re.sub(r"\s+", " ", text)
